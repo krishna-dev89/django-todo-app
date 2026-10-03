@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000;
+            color:#fff;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Edit todo</h2>
+    <form method="POST">
+        {% csrf_token %}
+         <textarea name="todoname" rows="5" class="form-control">{{ todo.task }}</textarea>
+
+        <button type="submit" class="btn btn-primary mt-3">
+           Save Changes
+        </button>
+
+
+    </form>
+    
+</body>
+</html>
